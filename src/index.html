@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibonacci Web Worker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Fibonacci</h1>
-    <h2>A Web Worker Study</h2>
+    <header class="header">
+        <div class="header__info">
+            <h1 class="title">Fibonacci</h1>
+            <h2 class="subtitle">A Web Worker Study</h2>
+        </div>
+        <div class="header__link">
+            <a class="link" href="https://github.com/FabioRomeiro/FibonacciWebWorker">
+                Code on Github
+            </a>
+        </div>
+    </header>
     
-    <div>
-        <button data-start-btn>Start</button>
-        <button data-stop-btn disabled>Stop</button>
+    <div class="actions">
+        <button class="button" data-start-btn>Start</button>
+        <button class="button button--danger" data-stop-btn disabled>Stop</button>
     </div>
 
-    <ul data-fibonacci-list>
-        <li data-fibonacci-number></li>
-    </ul>
+    <article class="content">
+        <ul class="list" data-fibonacci-list>
+            <li class="item" data-fibonacci-item>
+                <span class="index" data-fibonacci-index></span>
+                <span class="number" data-fibonacci-number></span>
+            </li>
+        </ul>
+    </article>
 
     <script src="/js/home.js"></script>
 </body>

@@ -13,7 +13,7 @@
         $startBtn = document.querySelector('[data-start-btn]');
         $stopBtn = document.querySelector('[data-stop-btn]');
         $fibonacciList = document.querySelector('[data-fibonacci-list]');
-        $fibonacciNumber = document.querySelector('[data-fibonacci-number]');
+        $fibonacciItem = document.querySelector('[data-fibonacci-item]');
         
         _clearNumbersList();
 
@@ -50,9 +50,15 @@
     }
 
     function renderNumber(index, number) {
-        let $numberElement = $fibonacciNumber.cloneNode(true);
-        $numberElement.innerText = `Fib(${index}): ${number}`;
-        $fibonacciList.insertBefore($numberElement, $fibonacciList.childNodes[0]);
+        let $item = $fibonacciItem.cloneNode(true);
+        
+        let $index = $item.childNodes[1];
+        $index.innerText = `${index}.`;
+        
+        let $number = $item.childNodes[3];
+        $number.innerText = `${number}`;
+        
+        $fibonacciList.insertBefore($item, $fibonacciList.childNodes[0]);
     }
 
     function onMessage (event) {
