@@ -14,4 +14,19 @@ These numbers are being recursively calculated by a Web Worker and not by the we
 
 ---
 
+### How do I run it?
+
+**Pre-requisites:**
+- NodeJs (v12.16.3)
+- Google Chrome (or any other browser that supports Web Workers)
+
+**Steps:**
+1. Clone this repository
+2. Access the project directory using your terminal
+3. Run `npm install`
+4. Run `npm start`
+5. Access [http://localhost:4000](http://localhost:4000)
+
+---
+
 [Frontend Masters - Service Workers](https://frontendmasters.com/courses/service-workers/)
